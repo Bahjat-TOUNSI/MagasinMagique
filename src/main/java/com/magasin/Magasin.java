@@ -118,8 +118,8 @@ class Magasin {
     private void updateSellIn(Item item){
         decreaseSellIn(item);
         if (item.sellIn < 0) {
-            if (item.name.equals("Comté")) {
-                increaseOrDecreaseQuality("increase");
+            if (!item.name.equals("Comté")) {
+                increaseOrDecreaseQuality("increase",item);
             }
             else {
                 if (item.name.equals("Pass VIP Concert")) {
