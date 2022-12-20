@@ -61,23 +61,23 @@ class MagasinTest {
         System.out.println(file_content);
     }
 
-//    @Test
-//    void testItemComteSellInIsNegativeCondition() throws IOException {
-//        Item[] items = new Item[] { new Item("Comté", 1, 5) };
-//        Magasin app = new Magasin(items);
-//        System.out.println(app.items[0]);
-//        app.updateItems();
-//        app.updateItems();
-//        assertEquals("Comté", app.items[0].name);
-//        assertEquals(-1, app.items[0].sellIn);
-//        assertEquals(8, app.items[0].quality);
-//        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
-//
-//        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_comte_sellin_is_negative.txt");
-//        Files.writeString(fileName, testOutput);
-//        String file_content = Files.readString(fileName);
-//        System.out.println(file_content);
-//    }
+    @Test
+    void testItemComteSellInIsNegativeCondition() throws IOException {
+        Item[] items = new Item[] { new Item("Comté", 1, 5) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateItems();
+        app.updateItems();
+        assertEquals("Comté", app.items[0].name);
+        assertEquals(-1, app.items[0].sellIn);
+        assertEquals(8, app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_comte_sellin_is_negative.txt");
+        Files.writeString(fileName, testOutput);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
 
 
     @Test
@@ -169,25 +169,25 @@ class MagasinTest {
         System.out.println(file_content);
     }
 
-//    @Test
-//    void testItemPassVIPConcertQualityIsNotOver50() throws IOException {
-//        Item[] items = new Item[] { new Item("Pass VIP Concert", 4, 48) };
-//        Magasin app = new Magasin(items);
-//        System.out.println(app.items[0]);
-//        app.updateItems();
-//        app.updateItems();
-//        app.updateItems();
-//        app.updateItems();
-//        assertEquals("Pass VIP Concert", app.items[0].name);
-//        assertEquals(0, app.items[0].sellIn);
-//        assertEquals(50, app.items[0].quality);
-//        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
-//
-//        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_not_over_50.txt");
-//        Files.writeString(fileName, testOutput);
-//        String file_content = Files.readString(fileName);
-//        System.out.println(file_content);
-//    }
+    @Test
+    void testItemPassVIPConcertQualityIsNotOver50() throws IOException {
+        Item[] items = new Item[] { new Item("Pass VIP Concert", 4, 48) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
+        assertEquals("Pass VIP Concert", app.items[0].name);
+        assertEquals(0, app.items[0].sellIn);
+        assertEquals(50, app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_not_over_50.txt");
+        Files.writeString(fileName, testOutput);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
 
     @Test
     void testItemPouvoirsMagiques() throws IOException {
