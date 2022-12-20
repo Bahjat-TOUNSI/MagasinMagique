@@ -13,6 +13,40 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MagasinTest {
 
     @Test
+    void testItemDoesNotExist() throws IOException {
+        Item[] items = new Item[] { new Item("Gwendal", 3, 50) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateQuality();
+        assertEquals("Gwendal", app.items[0].name);
+        assertEquals(2, app.items[0].sellIn);
+        assertEquals(49, app.items[0].quality);
+        String string = ("Item name: " + app.items[0].name + " SellIn was 3 and now is: " + app.items[0].sellIn + ", Quality was 50 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_gwendal.txt");
+        Files.writeString(fileName, string);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
+
+    @Test
+    void testItemDoesNotExist2() throws IOException {
+        Item[] items = new Item[] { new Item("Bahjat", -2, 2) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateQuality();
+        assertEquals("Bahjat", app.items[0].name);
+        assertEquals(-3, app.items[0].sellIn);
+        assertEquals(0, app.items[0].quality);
+        String string = ("Item name: " + app.items[0].name + " SellIn was -2 and now is: " + app.items[0].sellIn + ", Quality was 2 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_bahjat.txt");
+        Files.writeString(fileName, string);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
+
+    @Test
     void testItemComteNormalCondition() throws IOException {
         Item[] items = new Item[] { new Item("Comté", 2, 5) };
         Magasin app = new Magasin(items);
@@ -46,6 +80,7 @@ class MagasinTest {
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
+
 
     @Test
     void testItemKryptoniteNothingChanges() throws IOException {
@@ -131,6 +166,26 @@ class MagasinTest {
         String string = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_0.txt");
+        Files.writeString(fileName, string);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
+
+    @Test
+    void testItemPassVIPConcertQualityIsNotOver50() throws IOException {
+        Item[] items = new Item[] { new Item("Pass VIP Concert", 4, 48) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateQuality();
+        app.updateQuality();
+        app.updateQuality();
+        app.updateQuality();
+        assertEquals("Pass VIP Concert", app.items[0].name);
+        assertEquals(0, app.items[0].sellIn);
+        assertEquals(50, app.items[0].quality);
+        String string = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_not_over_50.txt");
         Files.writeString(fileName, string);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
