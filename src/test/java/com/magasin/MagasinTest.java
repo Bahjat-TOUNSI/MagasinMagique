@@ -15,7 +15,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Gwendal", 3, 50) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Gwendal", app.items[0].name);
         assertEquals(2, app.items[0].sellIn);
         assertEquals(49, app.items[0].quality);
@@ -32,7 +32,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Bahjat", -2, 2) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Bahjat", app.items[0].name);
         assertEquals(-3, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
@@ -49,7 +49,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Comté", 2, 5) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Comté", app.items[0].name);
         assertEquals(1, app.items[0].sellIn);
         assertEquals(6, app.items[0].quality);
@@ -66,8 +66,8 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Comté", 1, 5) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
-        app.updateQuality();
+        app.updateItems();
+        app.updateItems();
         assertEquals("Comté", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(8, app.items[0].quality);
@@ -85,10 +85,10 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Kryptonite", 5, 80) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
-        app.updateQuality();
-        app.updateQuality();
-        app.updateQuality();
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
         assertEquals("Kryptonite", app.items[0].name);
         assertEquals(5, app.items[0].sellIn);
         assertEquals(80, app.items[0].quality);
@@ -105,7 +105,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Pass VIP Concert", 20, 1) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(19, app.items[0].sellIn);
         assertEquals(2, app.items[0].quality);
@@ -122,7 +122,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Pass VIP Concert", 10, 1) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(9, app.items[0].sellIn);
         assertEquals(3, app.items[0].quality);
@@ -139,7 +139,7 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Pass VIP Concert", 5, 1) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
+        app.updateItems();
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(4, app.items[0].sellIn);
         assertEquals(4, app.items[0].quality);
@@ -156,8 +156,8 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Pass VIP Concert", 1, 40) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
-        app.updateQuality();
+        app.updateItems();
+        app.updateItems();
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
@@ -174,16 +174,34 @@ class MagasinTest {
         Item[] items = new Item[] { new Item("Pass VIP Concert", 4, 48) };
         Magasin app = new Magasin(items);
         System.out.println(app.items[0]);
-        app.updateQuality();
-        app.updateQuality();
-        app.updateQuality();
-        app.updateQuality();
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
+        app.updateItems();
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(0, app.items[0].sellIn);
         assertEquals(50, app.items[0].quality);
         String string = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_not_over_50.txt");
+        Files.writeString(fileName, string);
+        String file_content = Files.readString(fileName);
+        System.out.println(file_content);
+    }
+
+    @Test
+    void testItemPouvoirsMagiques() throws IOException {
+        Item[] items = new Item[] { new Item("Pouvoirs magiques", 10, 40) };
+        Magasin app = new Magasin(items);
+        System.out.println(app.items[0]);
+        app.updateItems();
+        app.updateItems();
+        assertEquals("Pouvoirs magiques", app.items[0].name);
+        assertEquals(8, app.items[0].sellIn);
+        assertEquals(36, app.items[0].quality);
+        String string = ("Item name: " + app.items[0].name + " SellIn was 10 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
+
+        Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_pouvoirs_magiques.txt");
         Files.writeString(fileName, string);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
