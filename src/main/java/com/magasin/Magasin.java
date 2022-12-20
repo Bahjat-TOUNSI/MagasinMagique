@@ -119,7 +119,7 @@ class Magasin {
         decreaseSellIn(item);
         if (item.sellIn < 0) {
             if (item.name.equals("Comté")) {
-                increaseOrDecreaseQuality("increase",item);
+                increaseOrDecreaseQuality("increase");
             }
             else {
                 if (item.name.equals("Pass VIP Concert")) {
