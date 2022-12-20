@@ -82,6 +82,7 @@ class Magasin {
     }
 }
 
+
 //    public void updateItems() {
 //        for (Item item : items) {
 //            if (item.name.equals("Kryptonite")) continue;
