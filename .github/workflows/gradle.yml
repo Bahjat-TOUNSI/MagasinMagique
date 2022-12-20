@@ -34,13 +34,8 @@ jobs:
         arguments: build
     - name: Run chmod to make gradlew executable
       run: chmod +x ./gradlew
-    - name: Upload test reports
+    - name: Upload build reports
       uses: actions/upload-artifact@v3
       with:
-        name: test-reports
-        path: build/test-results/
-    - name: Upload coverage reports
-      uses: actions/upload-artifact@v3
-      with:
-        name: coverage-reports
+        name: build-reports
         path: build/reports/
