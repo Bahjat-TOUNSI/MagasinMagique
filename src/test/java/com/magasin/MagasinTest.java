@@ -207,5 +207,4 @@ class MagasinTest {
         System.out.println(file_content);
     }
 
-
 }
