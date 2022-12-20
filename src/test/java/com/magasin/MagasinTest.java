@@ -19,10 +19,10 @@ class MagasinTest {
         assertEquals("Gwendal", app.items[0].name);
         assertEquals(2, app.items[0].sellIn);
         assertEquals(49, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 3 and now is: " + app.items[0].sellIn + ", Quality was 50 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 3 and now is: " + app.items[0].sellIn + ", Quality was 50 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_gwendal.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -36,10 +36,10 @@ class MagasinTest {
         assertEquals("Bahjat", app.items[0].name);
         assertEquals(-3, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was -2 and now is: " + app.items[0].sellIn + ", Quality was 2 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was -2 and now is: " + app.items[0].sellIn + ", Quality was 2 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_bahjat.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -53,10 +53,10 @@ class MagasinTest {
         assertEquals("Comté", app.items[0].name);
         assertEquals(1, app.items[0].sellIn);
         assertEquals(6, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 2 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 2 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_comte.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -71,10 +71,10 @@ class MagasinTest {
         assertEquals("Comté", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(8, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 5 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_comte_sellin_is_negative.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -92,10 +92,10 @@ class MagasinTest {
         assertEquals("Kryptonite", app.items[0].name);
         assertEquals(5, app.items[0].sellIn);
         assertEquals(80, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 5 and now is: " + app.items[0].sellIn + ", Quality was 80 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 5 and now is: " + app.items[0].sellIn + ", Quality was 80 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_kryponite.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -109,10 +109,10 @@ class MagasinTest {
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(19, app.items[0].sellIn);
         assertEquals(2, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 20 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 20 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -126,10 +126,10 @@ class MagasinTest {
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(9, app.items[0].sellIn);
         assertEquals(3, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 10 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 10 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_add_2.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -143,10 +143,10 @@ class MagasinTest {
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(4, app.items[0].sellIn);
         assertEquals(4, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 5 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 5 and now is: " + app.items[0].sellIn + ", Quality was 1 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_add_3.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -161,10 +161,10 @@ class MagasinTest {
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 1 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_0.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -181,10 +181,10 @@ class MagasinTest {
         assertEquals("Pass VIP Concert", app.items[0].name);
         assertEquals(0, app.items[0].sellIn);
         assertEquals(50, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 4 and now is: " + app.items[0].sellIn + ", Quality was 48 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_vip_concert_quality_is_not_over_50.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
@@ -199,10 +199,10 @@ class MagasinTest {
         assertEquals("Pouvoirs magiques", app.items[0].name);
         assertEquals(8, app.items[0].sellIn);
         assertEquals(36, app.items[0].quality);
-        String string = ("Item name: " + app.items[0].name + " SellIn was 10 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
+        String testOutput = ("Item name: " + app.items[0].name + " SellIn was 10 and now is: " + app.items[0].sellIn + ", Quality was 40 and now is: " + app.items[0].quality);
 
         Path fileName = Path.of("C:\\Users\\bahjat.tounsi\\Documents\\Tests\\test_output\\test_pass_pouvoirs_magiques.txt");
-        Files.writeString(fileName, string);
+        Files.writeString(fileName, testOutput);
         String file_content = Files.readString(fileName);
         System.out.println(file_content);
     }
